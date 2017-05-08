@@ -20,7 +20,8 @@ $(document).ready(function() {
 	    dataType: 'jsonp'
 	    
     }).then(function(data) {
-       $('.greenhouse-temp').append(data.result);
+       $('.greenhouse-temp').append(data.name);
+       console.log(data);
        //$('.greeting-content').append(data.content);
     });
     
