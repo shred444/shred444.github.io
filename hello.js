@@ -8,8 +8,8 @@ $(document).ready(function() {
 	    
     }).then(function(data) {
        $('.current-weather').append(data.currently.summary);
-       $('.current-temp').append(data.currently.temperature);
-       $('.current-humidity').append(data.currently.humidity);
+       $('.current-temp').append(Math.round(data.currently.temperature));
+       $('.current-humidity').append(data.currently.humidity*100 + "%");
        
        //$('.greeting-content').append(data.content);
     });
@@ -36,7 +36,7 @@ $(document).ready(function() {
 	    dataType: 'json'
 	    
     }).then(function(data) {
-		$('.greenhouse-humidity').append(Math.round(data.result));
+		$('.greenhouse-humidity').append(Math.round(data.result) + "%");
 		$('.connected').append(data.coreInfo.connected);
 		$('.updated').append(Date(data.coreInfo.last_heard));
        
