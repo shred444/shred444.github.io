@@ -9,6 +9,7 @@ $(document).ready(function() {
     }).then(function(data) {
        $('.current-weather').append(data.currently.summary);
        $('.current-temp').append(data.currently.temperature);
+       $('.current-humidity').append(data.currently.humidity);
        
        //$('.greeting-content').append(data.content);
     });
