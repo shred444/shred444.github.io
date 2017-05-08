@@ -17,7 +17,7 @@ $(document).ready(function() {
         //data: myData,
     	type: 'GET',
     	crossDomain: true,
-	    dataType: 'jsonp'
+	    dataType: 'json'
 	    
     }).then(function(data) {
        $('.greenhouse-temp').append(data.name);
