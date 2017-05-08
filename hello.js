@@ -8,6 +8,8 @@ $(document).ready(function() {
 	    
     }).then(function(data) {
        $('.current-weather').append(data.currently.summary);
+       $('.current-temp').append(data.currently.temperature);
+       
        //$('.greeting-content').append(data.content);
     });
     
@@ -20,7 +22,37 @@ $(document).ready(function() {
 	    dataType: 'json'
 	    
     }).then(function(data) {
-       $('.greenhouse-temp').append(data.result);
+       $('.greenhouse-temp').append(Math.round(data.result));
+       console.log(data);
+       //$('.greeting-content').append(data.content);
+    });
+    
+    $.ajax({
+        url: "https://api.particle.io/v1/devices/26001c001247353136383631/humidity?access_token=e5ad56d7b6af5befcbf3992275e508b1c2911996",
+        //data: myData,
+    	type: 'GET',
+    	crossDomain: true,
+	    dataType: 'json'
+	    
+    }).then(function(data) {
+		$('.greenhouse-humidity').append(Math.round(data.result));
+		$('.connected').append(data.coreInfo.connected);
+		$('.updated').append(Date(data.coreInfo.last_heard));
+       
+       console.log(data);
+       //$('.greeting-content').append(data.content);
+    });
+    
+    $.ajax({
+        url: "https://api.particle.io/v1/devices/26001c001247353136383631/soil?access_token=e5ad56d7b6af5befcbf3992275e508b1c2911996",
+        //data: myData,
+    	type: 'GET',
+    	crossDomain: true,
+	    dataType: 'json'
+	    
+    }).then(function(data) {
+		$('.greenhouse-soil').append(Math.round(data.result));
+       
        console.log(data);
        //$('.greeting-content').append(data.content);
     });
