@@ -13,7 +13,7 @@ $(document).ready(function() {
     
     
     $.ajax({
-        url: "api.particle.io/v1/devices/26001c001247353136383631/air?access_token=e5ad56d7b6af5befcbf3992275e508b1c2911996",
+        url: "https://api.particle.io/v1/devices/26001c001247353136383631/air?access_token=e5ad56d7b6af5befcbf3992275e508b1c2911996",
         //data: myData,
     	type: 'GET',
     	crossDomain: true,
