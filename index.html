@@ -4,20 +4,43 @@
         <title>Hello jQuery</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
         <script src="hello.js"></script>
+        <link rel="stylesheet" href="style.css">
     </head>
 
     <body>
-        <div>
-            <p class="connected">Status: </p>
-            <p class="current-weather">The current weather is </p>
-            <p class="current-temp">The current temperature is </p>
-            <p class="current-humidity">The current humidity is </p>
-            <p>
-            <p class="greenhouse-temp">The greenhouse temp is </p>
-            <p class="greenhouse-humidity">The greenhouse humidity is </p>
-            <p class="greenhouse-soil">The soil temperature is </p>
-            <p class="updated">Last Updated </p>
+        <div class="container">
+            <div class="current-weather">
+            	<h1 class="title">Weather</h1>
+            	<h2 class="value"></h2> 
+            </div>
+            
+            <div class="current-temp">
+            	<h1 class="title">Outside Temp</h1>
+            	<h2 class="value"></h2> 
+            </div>
+            <div class="current-humidity">
+            	<h1 class="title">Outside Humidity</h1>
+            	<h2 class="value"></h2> 
+            </div>
+            
+            <div class="greenhouse-temp">
+            	<h1 class="title">Inside Temp</h1>
+            	<h2 class="value"></h2>
+            </div>
+            <div class="greenhouse-humidity">
+            	<h1 class="title">Inside Humidity</h1>
+            	<h2 class="value"></h2> 
+            </div>
+            <div class="greenhouse-soil">
+            	<h1 class="title">Soil Temp</h1>
+            	<h2 class="value"></h2> 
+            </div>
+            
 
         </div>
+        
+            
+            <div class="updated">Last Updated </div>
+        
     </body>
 </html>

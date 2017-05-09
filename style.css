@@ -1,0 +1,73 @@
+html, body, .container
+{
+    height: 50pt; 
+    min-height: 50pt;
+    
+      font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+h1 {
+  margin-bottom: 0px;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400; 
+
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 400;
+  color: black;
+  margin:0px;
+  
+   }
+
+.current-weather {
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+}
+
+.current-temp{
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+}
+
+
+.current-humidity{
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: white;
+}
+
+.greenhouse-temp {
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: #DDDDDD;
+}
+
+.greenhouse-humidity{
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.greenhouse-soil{
+    float: left;
+    width: 15%;
+    height: 100%;
+    background-color: yellow;
+}
+
+.updated{
+	float: clear;
+	}

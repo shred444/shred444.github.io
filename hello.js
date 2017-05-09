@@ -7,9 +7,13 @@ $(document).ready(function() {
 	    dataType: 'jsonp'
 	    
     }).then(function(data) {
-       $('.current-weather').append(data.currently.summary);
-       $('.current-temp').append(Math.round(data.currently.temperature));
-       $('.current-humidity').append(data.currently.humidity*100 + "%");
+       //$('.current-weather').append(data.currently.summary);
+       
+       $(".current-weather h1").html("Weather");
+       $(".current-weather h2").html(data.currently.summary);
+       
+       $('.current-temp h2').append(Math.round(data.currently.temperature));
+       $('.current-humidity h2').append(data.currently.humidity*100 + "%");
        
        //$('.greeting-content').append(data.content);
     });
@@ -23,7 +27,7 @@ $(document).ready(function() {
 	    dataType: 'json'
 	    
     }).then(function(data) {
-       $('.greenhouse-temp').append(Math.round(data.result));
+       $('.greenhouse-temp h2').append(Math.round(data.result));
        console.log(data);
        //$('.greeting-content').append(data.content);
     });
@@ -36,8 +40,8 @@ $(document).ready(function() {
 	    dataType: 'json'
 	    
     }).then(function(data) {
-		$('.greenhouse-humidity').append(Math.round(data.result) + "%");
-		$('.connected').append(data.coreInfo.connected);
+		$('.greenhouse-humidity h2').append(Math.round(data.result) + "%");
+		$('.connected h2').append(data.coreInfo.connected);
 		$('.updated').append(Date(data.coreInfo.last_heard));
        
        console.log(data);
