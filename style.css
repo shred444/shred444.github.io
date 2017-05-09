@@ -1,7 +1,7 @@
 html, body, .container
 {
-    height: 50pt; 
-    min-height: 50pt;
+    height: 30pt; 
+    min-height: 30pt;
     
       font-family: 'Open Sans', "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -10,7 +10,7 @@ html, body, .container
 h1 {
   margin-bottom: 0px;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400; 
 
 }
@@ -18,7 +18,7 @@ h1 {
 h2 {
   text-transform: uppercase;
   text-align: center;
-  font-size: 20px;
+  font-size: 15px;
   font-weight: 400;
   color: black;
   margin:0px;

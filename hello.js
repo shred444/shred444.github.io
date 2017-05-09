@@ -56,7 +56,7 @@ $(document).ready(function() {
 	    dataType: 'json'
 	    
     }).then(function(data) {
-		$('.greenhouse-soil').append(Math.round(data.result));
+		$('.greenhouse-soil h2').append(Math.round(data.result));
        
        console.log(data);
        //$('.greeting-content').append(data.content);
