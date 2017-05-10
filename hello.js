@@ -46,7 +46,10 @@ $(document).ready(function() {
 		$('.greenhouse-humidity h2').append(Math.round(data.result) + "%");
 		$("#greenhouse-humidity").append(Math.round(data.result) + "%");
 		$('.connected h2').append(data.coreInfo.connected);
-		$('#last-update').append(Date(data.coreInfo.last_heard));
+		
+		var updated = new Date(data.coreInfo.last_heard);
+		
+		$('#last-update').append(updated.toLocaleString());
        
        console.log(data);
        //$('.greeting-content').append(data.content);
